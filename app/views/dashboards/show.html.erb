@@ -1,7 +1,8 @@
 
 
 
-Signed in as current_user.name (signout link)
+Signed in as <%= current_user.user_name %> 
+		
 
 <%= form_for @greeting do |f| %>
 <%= f.label "Send", :body %>
