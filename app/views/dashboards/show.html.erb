@@ -1,0 +1,14 @@
+Signed in as current_user.name (signout link)
+
+<%= form_for @greeting do |f| %>
+<%= f.label "Send", :body %>
+<%= f.text_field :body, placeholder: "Greetings, earthling!" %>
+<%= f.label "to", :receiver %>
+<%= f.collection_select :receiver_id, @users, :id, :user_name  %>
+<%= f.submit "Greet!" %>
+<% end %>
+
+
+<div id="the_greetings">
+<%= render @greetings %>
+</div>

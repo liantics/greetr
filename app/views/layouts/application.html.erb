@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greetr</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+	<script>
+		window.pusher_key = "<%= ENV.fetch("PUSHER_PUBLIC_KEY") %>";
+		window.pusher_channel = "<%= current_user.id %>"
+	</script> 
+
+</head>
+
+<body>
+	<div class="create_session_links">
+	<% if signed_in? %>
+		<%= button_to "Sign out", :session, method: :delete %> 
+
+	<% else %>
+
+		<span class="roomy"><%= link_to "Sign up", [:new, :user] %></span><span class="roomy"><%= link_to "Sign in", [:new, :session] %></span></p>
+		
+	<% end %>
+	</div>
+
+	<%= yield %>
+
+
+	<script src="//js.pusher.com/2.2/pusher.min.js"></script>
+</body>
+
+</html>
