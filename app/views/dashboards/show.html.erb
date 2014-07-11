@@ -1,3 +1,6 @@
+
+
+
 Signed in as current_user.name (signout link)
 
 <%= form_for @greeting do |f| %>
@@ -12,3 +15,8 @@ Signed in as current_user.name (signout link)
 <div id="the_greetings">
 <%= render @greetings %>
 </div>
+
+<script>
+		window.pusher_key = "<%= ENV.fetch("PUSHER_PUBLIC_KEY") %>";
+		window.pusher_channel = "<%= current_user.id %>"
+</script> 

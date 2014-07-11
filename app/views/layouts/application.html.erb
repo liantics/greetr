@@ -6,11 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-	<script>
-		window.pusher_key = "<%= ENV.fetch("PUSHER_PUBLIC_KEY") %>";
-		window.pusher_channel = "<%= current_user.id %>"
-	</script> 
-
+	
 </head>
 
 <body>
