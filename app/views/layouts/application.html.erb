@@ -13,9 +13,12 @@
 </head>
 
 <body>
+	<% if signed_in? %>
+	<span class="sign_out_link"><%= link_to "Sign out", :session, method: :delete %></span> 
+	<% end %>
 
-	<!-- <h1 >ExtraterrestreeYos</h1> -->
-	<h1 >Greetzings!</h1> 
+	<!-- <h1 >ExtraterrestreeYoz</h1> -->
+	<h1 >Greet-Zings!</h1> 
 
 	<div class="spaceship">
 	  <div class="bubble"></div>
@@ -23,16 +26,7 @@
 	</div>
 
 	<div class="spacer"></div>
-	<div class="create_session_links">
-	<% if signed_in? %>
-		<%= button_to "Sign out", :session, method: :delete %> 
-
-	<% else %>
-
-		<span class="roomy"><%= link_to "Sign up", [:new, :user] %></span><span class="roomy"><%= link_to "Sign in", [:new, :session] %></span></p>
-		
-	<% end %>
-	</div>
+	
 
 	<%= yield %>
 

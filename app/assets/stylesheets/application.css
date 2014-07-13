@@ -33,6 +33,13 @@
   width: 80%;
 }
 
+.form_for_signup_and_sign_in {
+  display: block;
+  margin: 0 auto;
+  margin: 0 auto;
+  width: 80%;
+}
+
 /*text styles*/
 
 .greeting_text {
@@ -56,6 +63,14 @@ h1 {
   color: #cb7;
 }
 
+h2 {
+  font-size: 1.6em;
+  text-align: center;
+  font-family: "Fontdiner Swanky";
+  color: #666;
+}
+
+
 .timestamp {
   font-style: italic;
   color: #ccc;
@@ -65,7 +80,7 @@ h1 {
 
 .spaceship {
   position: relative;
-  left: 110px;
+  left: 115px;
   float: none;
   width: 500px;
   display: block;
@@ -82,14 +97,14 @@ h1 {
   border-radius: 70px 70px 5px 5px;
   border-bottom: 2px solid #666;
   position: relative;
-  left: 60px;
+  left: 66px;
 }
 
 .ship_base {
   height: 0;
   width: 70px;
   border-top: 40px solid teal;
-  border-left: 70px solid transparent;
+  border-left: 75px solid transparent;
   border-right: 70px solid transparent;
   border-radius: 20px 20px 50px 50px;
 }
@@ -97,7 +112,8 @@ h1 {
 /*links for login and signup */
 
 .create_session_links a{
-	max-width: 80%;
+  max-width: 80%;
+  border-radius: 5px;
 	margin-left: 10pt;
 	margin-right: 10pt;
 	padding: 5pt;
@@ -106,4 +122,19 @@ h1 {
 	text-decoration: none;
 	font-family: arial;
 	font-size: 20 pt;
+}
+
+.sign_out_link a{
+  float: right;
+  border-radius: 5px;
+  max-width: 80%;
+  margin-left: 10pt;
+  margin-right: 10pt;
+  padding: 5pt;
+  color: #FFFFFF;
+  background-color: gray;
+  text-decoration: none;
+  font-family: arial;
+  font-size: 20 pt;
+
 }
