@@ -16,14 +16,31 @@
 
 .spacer {
 	height: 20pt;
-
 }
+
+.greeting_text {
+	font-size: 15pt;
+	font-family: 'Source Code Pro';
+	font-weight: 400;
+	padding: 5pt;	
+}
+
+.uname{
+	font-size: 20pt;
+	color: teal;
+	font-family: 'Source Code Pro';
+	font-weight: 900;
+}
+
+
 h1 {
 	font-size: 3em;
   text-align: center;
   font-family: "Fontdiner Swanky";
   color: #cb7;
 }
+
+/*Space ship css*/
 
 .spaceship {
   position: relative;
@@ -46,6 +63,7 @@ h1 {
   position: relative;
   left: 60px;
 }
+
 .ship_base {
   height: 0;
   width: 70px;
@@ -54,6 +72,8 @@ h1 {
   border-right: 70px solid transparent;
   border-radius: 20px 20px 50px 50px;
 }
+
+/*links for login and signup */
 
 .create_session_links a{
 	max-width: 80%;
@@ -65,10 +85,4 @@ h1 {
 	text-decoration: none;
 	font-family: arial;
 	font-size: 20 pt;
-}
-
-.uname{
-	font-weight: bold;
-	color: teal;
-
 }

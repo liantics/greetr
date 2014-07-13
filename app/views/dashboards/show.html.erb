@@ -5,9 +5,9 @@ Signed in as <%= current_user.user_name %>
 		
 
 <%= form_for @greeting do |f| %>
-<%= f.label "Send", :body %>
+<%= f.label :body, "Send" %>
 <%= f.text_field :body, placeholder: "Greetings, earthling!" %>
-<%= f.label "to", :receiver %>
+<%= f.label :receiver, "to" %>
 <%= f.collection_select :receiver_id, @users, :id, :user_name  %>
 <%= f.submit "Greet!" %>
 <% end %>

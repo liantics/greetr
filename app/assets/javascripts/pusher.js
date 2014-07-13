@@ -9,6 +9,7 @@ $(function(){
     $("#new_greeting").submit(function(){
 
       $.post("/greetings", $("#new_greeting").serialize());
+      $("#greeting_body").val("")
       
       return false;
     });
