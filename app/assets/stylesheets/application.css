@@ -15,10 +15,11 @@
  */
 
 .spacer {
-	height: 20px;
-	
+	height: 20pt;
+
 }
-.center {
+h1 {
+	font-size: 3em;
   text-align: center;
   font-family: "Fontdiner Swanky";
   color: #cb7;
