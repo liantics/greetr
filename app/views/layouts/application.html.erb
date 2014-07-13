@@ -4,12 +4,22 @@
   <title>Greetr</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky:400" rel="stylesheet" type="text/css">
+
   <%= csrf_meta_tags %>
 
 	
 </head>
 
 <body>
+
+	<h1 class="center">Extraterrestrios</h1>
+	<div class="spaceship">
+	  <div class="bubble"></div>
+	  <div class="ship_base"></div>
+	</div>
+
+	<div class="spacer"></div>
 	<div class="create_session_links">
 	<% if signed_in? %>
 		<%= button_to "Sign out", :session, method: :delete %> 
