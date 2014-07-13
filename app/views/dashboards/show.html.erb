@@ -3,7 +3,7 @@
 
 Signed in as <%= current_user.user_name %> 
 		
-
+<div class="form_for_greetings">
 <%= form_for @greeting do |f| %>
 <%= f.label :body, "Send" %>
 <%= f.text_field :body, placeholder: "Greetings, earthling!" %>
@@ -11,9 +11,10 @@ Signed in as <%= current_user.user_name %>
 <%= f.collection_select :receiver_id, @users, :id, :user_name  %>
 <%= f.submit "Greet!" %>
 <% end %>
+</div>
 
 
-<div id="the_greetings">
+<div class="block_o_greetings" id="the_greetings">
 <%= render @greetings %>
 </div>
 

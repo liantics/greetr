@@ -14,9 +14,26 @@
  *= require_self
  */
 
+/*alignment styles*/
 .spacer {
 	height: 20pt;
 }
+
+.block_o_greetings {
+  display: block;
+  margin: 0 auto;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.form_for_greetings {
+  display: block;
+  margin: 0 auto;
+  margin: 0 auto;
+  width: 80%;
+}
+
+/*text styles*/
 
 .greeting_text {
 	font-size: 15pt;
@@ -32,12 +49,16 @@
 	font-weight: 900;
 }
 
-
 h1 {
 	font-size: 3em;
   text-align: center;
   font-family: "Fontdiner Swanky";
   color: #cb7;
+}
+
+.timestamp {
+  font-style: italic;
+  color: #ccc;
 }
 
 /*Space ship css*/

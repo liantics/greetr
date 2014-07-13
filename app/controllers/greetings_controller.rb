@@ -4,7 +4,7 @@ class GreetingsController < ApplicationController
 
   def create
     greeting = current_user.sent_greetings.create(greeting_params)
-    push_greeting = render greeting #returns an html file
+    push_greeting = render greeting #render returns an html blob
 
       
     Pusher[greeting.receiver_id.to_s].trigger('new_greeting', {
