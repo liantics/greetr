@@ -19,6 +19,13 @@
 	height: 20pt;
 }
 
+.center {
+  display: block;
+  margin: 0 auto;
+  margin: 0 auto;
+  width: 80%;
+}
+
 .block_o_greetings {
   display: block;
   margin: 0 auto;
@@ -38,6 +45,10 @@
   margin: 0 auto;
   margin: 0 auto;
   width: 80%;
+  font-size: 15pt;
+  font-family: 'Source Code Pro';
+  font-weight: 900;
+  color: teal;
 }
 
 /*text styles*/
@@ -66,6 +77,12 @@ h1 {
 h2 {
   font-size: 1.6em;
   text-align: center;
+  font-family: "Fontdiner Swanky";
+  color: #666;
+}
+
+h3 {
+  font-size: 1.3em;
   font-family: "Fontdiner Swanky";
   color: #666;
 }
@@ -112,6 +129,7 @@ h2 {
 /*links for login and signup */
 
 .create_session_links a{
+
   max-width: 80%;
   border-radius: 5px;
 	margin-left: 10pt;

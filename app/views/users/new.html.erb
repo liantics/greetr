@@ -1,13 +1,6 @@
 <h2>Instant Message Your Friends with Greet-zings!</h2>
 <div class="spacer"></div>
-<div class="create_session_links">
-    <% if signed_in? %>
-      <%= button_to "Sign out", :session, method: :delete %> 
 
-    <% else %>
-      <span class="roomy"><%= link_to "Show Sign In Form", [:new, :session] %></span></p>
-    <% end %>
-  </div>
 
   <div class="form_for_signup_and_sign_in">
   <%= form_for @user do |form| %>
@@ -27,4 +20,17 @@
       <%= form.submit "Sign up" %>
     </div>
   <% end %>
+</div>
+
+<div class="center">
+  <div class="create_session_links">
+    <% if signed_in? %>
+      <%= button_to "Sign out", :session, method: :delete %> 
+
+    <% else %>
+      <h3>Already One of Us?</h3>
+
+      <span class="roomy"><%= link_to "Show Sign In Form", [:new, :session] %></span></p>
+    <% end %>
+  </div>
 </div>
