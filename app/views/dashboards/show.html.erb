@@ -10,7 +10,7 @@
 <%= f.text_field :body, placeholder: "Greetings, earthling!" %>
 <%= f.label :receiver, "to" %>
 <%= f.collection_select :receiver_id, @users, :id, :user_name  %>
-<%= f.submit "Greet!" %><span id="proof_o_sending">not sent yet</span>
+<%= f.submit "Greet!" %><span id="proof_o_sending"></span>
 <% end %>
 
 </div>
