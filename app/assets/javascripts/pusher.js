@@ -6,19 +6,27 @@ $(function(){
       }
     };
 
-    $("#new_greeting").submit(function(){
+    $( "#proof_o_sending" ).html(" ")
 
+    $("#new_greeting").submit(function(){
+      $("#errors").html("");
+      
       $.post("/greetings", $("#new_greeting").serialize());
       $("#greeting_body").val("")
-      
+
+      $( "#proof_o_sending" ).html(" sent ...")
+
       return false;
     });
 
     var pusher = new Pusher(window.pusher_key);
-    var channel = pusher.subscribe(window.pusher_channel);
-    
-    channel.bind('new_greeting', function(data) {
-      $('#the_greetings').prepend(data.greeting);
-    });
+    var channel = pusher.subscribe(window.pusher_channel);   
 
+    channel.bind('new_greeting', function(data) {
+      
+      $('#the_greetings').
+      prepend(data.greeting)
+      
+    });
+    
 });

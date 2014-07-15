@@ -1,0 +1,7 @@
+<% if target.errors.present? %>
+	<h2 class="red_alert">This form has <%= pluralize target.errors.count, "error" %>:</h2>
+
+	 <% target.errors.full_messages.each do |message| %>
+	    <div class="roomy"><li class="red_alert"><%= message %></li></div>
+	 <% end %>
+<% end %>

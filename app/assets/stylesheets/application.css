@@ -38,6 +38,10 @@
   margin: 0 auto;
   margin: 0 auto;
   width: 80%;
+  font-size: 1.7em;
+  font-family: 'Source Code Pro';
+  font-weight: 900;
+  color: teal;
 }
 
 .form_for_signup_and_sign_in {
@@ -45,13 +49,17 @@
   margin: 0 auto;
   margin: 0 auto;
   width: 80%;
-  font-size: 15pt;
+  font-size: 1.7em;
   font-family: 'Source Code Pro';
   font-weight: 900;
   color: teal;
 }
 
 /*text styles*/
+
+.red_alert {
+  color: red;
+}
 
 .greeting_text {
 	font-size: 15pt;
@@ -91,6 +99,12 @@ h3 {
 .timestamp {
   font-style: italic;
   color: #ccc;
+}
+
+#proof_o_sending {
+  font-size: .5em;
+  font-style: italic;
+  color: #666;
 }
 
 /*Space ship css*/

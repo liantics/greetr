@@ -1,7 +1,8 @@
-
-
-
 <h2>Hey, <%= current_user.user_name %>! Send some greetings...</h2>
+<div id="errors" class="red_alert"></div>
+
+<div class="spacer"></div>
+
 		
 <div class="form_for_greetings">
 <%= form_for @greeting do |f| %>
@@ -9,13 +10,18 @@
 <%= f.text_field :body, placeholder: "Greetings, earthling!" %>
 <%= f.label :receiver, "to" %>
 <%= f.collection_select :receiver_id, @users, :id, :user_name  %>
-<%= f.submit "Greet!" %>
+<%= f.submit "Greet!" %><span id="proof_o_sending">not sent yet</span>
 <% end %>
+
 </div>
 
+<div class="spacer"></div>
 
 <div class="block_o_greetings" id="the_greetings">
+
+
 <%= render @greetings %>
+
 </div>
 
 <script>
