@@ -1,5 +1,3 @@
-
-
 $(function(){
    // Enable pusher logging - don't include this in production
     Pusher.log = function(message) {
@@ -8,16 +6,12 @@ $(function(){
       }
     };
 
-    $( "#proof_o_sending" ).html(" ")
-
     $("#new_greeting").submit(function(){
+      $( "#proof_o_sending" ).html(" sent ...").show().fadeOut(500)
       $("#errors").html("");
       
       $.post("/greetings", $("#new_greeting").serialize());
       $("#greeting_body").val("")
-
-      $( "#proof_o_sending" ).html(" sent ...").fadeOut(500)
-
 
       return false;
     });
