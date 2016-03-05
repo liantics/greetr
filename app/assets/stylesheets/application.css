@@ -55,6 +55,10 @@
   color: teal;
 }
 
+#greeting_body {
+  height: 20px;
+}
+
 /*text styles*/
 
 .red_alert {

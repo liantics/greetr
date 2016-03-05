@@ -35,9 +35,22 @@ gem 'monban-generators'
 # easy environment variables
 gem 'dotenv-rails', group: [:development, :test]
 
-# pusher gem
+# pusher real time message pushing gem
 
 gem 'pusher'
+
+#
+# PERFORMANCE TOOLS TURN THESE ON WHEN READY TO START
+# ADDING PERFORMANCE FEATURES
+#
+# alerts you to db performance issues
+#gem "bullet", :group => "development"
+
+# enables you to create a job queue, builds a table
+# sample usage:
+# @user.delay.activate(@device)
+
+# gem 'delayed_job_active_record'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
