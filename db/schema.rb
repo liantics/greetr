@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,31 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140711134700) do
+ActiveRecord::Schema.define(version: 2014_07_11_134700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "greetings", force: true do |t|
-    t.integer  "sender_id",   null: false
-    t.integer  "receiver_id", null: false
-    t.text     "body",        null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "greetings", force: :cascade do |t|
+    t.bigint "sender_id", null: false
+    t.bigint "receiver_id", null: false
+    t.text "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["receiver_id"], name: "index_greetings_on_receiver_id"
+    t.index ["sender_id"], name: "index_greetings_on_sender_id"
   end
 
-  add_index "greetings", ["receiver_id"], name: "index_greetings_on_receiver_id", using: :btree
-  add_index "greetings", ["sender_id"], name: "index_greetings_on_sender_id", using: :btree
-
-  create_table "users", force: true do |t|
-    t.string   "user_name",       null: false
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+  create_table "users", force: :cascade do |t|
+    t.string "user_name", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["user_name"], name: "index_users_on_user_name"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["user_name"], name: "index_users_on_user_name", using: :btree
 
 end

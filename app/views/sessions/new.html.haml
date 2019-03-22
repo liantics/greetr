@@ -1,0 +1,20 @@
+%h2 Instant Message Your Friends with Greet-zings!
+.spacer
+.form_for_signup_and_sign_in
+  = form_for :session, url: session_path do |form|
+    %div
+      = form.label :email
+      = form.email_field :email
+    %div
+      = form.label :password
+      = form.password_field :password
+    %div
+      = form.submit "Sign in"
+.center
+  .create_session_links
+    - if signed_in?
+      = button_to "Sign out", :session, method: :delete
+    - else
+      %h3 Not Signed Up, Yet?
+      %span.roomy= link_to "Show Sign Up Form", [:new, :user]
+

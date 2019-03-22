@@ -10,7 +10,7 @@ class GreetingsController < ApplicationController
 
       Pusher[greeting.receiver_id.to_s].trigger('new_greeting', {
         greeting: push_greeting
-       })  
+       })
 
     else
       render partial: "errors", locals: {target: greeting}, status: 422

@@ -15,6 +15,7 @@
 # gem 'pg'
 #
 default: &default
+  host: localhost
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
@@ -23,6 +24,9 @@ default: &default
 
 development:
   <<: *default
+  database: greetr_development
+  username: <%= ENV['GREETR_DATABASE_USER'] %>
+  password: <%= ENV['GREETR_DATABASE_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -55,6 +59,7 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
+  host: localhost
   <<: *default
 
 # As with config/secrets.yml, you never want to store sensitive information,

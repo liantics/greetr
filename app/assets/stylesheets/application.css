@@ -16,7 +16,7 @@
 
 /*alignment styles*/
 .spacer {
-	height: 20pt;
+  height: 1.5rem;
 }
 
 .center {
@@ -26,6 +26,10 @@
   width: 80%;
 }
 
+.sign-out-wrapper {
+  height: 2rem;
+}
+
 .block_o_greetings {
   display: block;
   margin: 0 auto;
@@ -33,72 +37,136 @@
   width: 80%;
 }
 
+.form-wrapper {
+  /*border: 1px solid pink;*/
+  height: 5rem;
+  width: 90%;
+}
+
 .form_for_greetings {
   display: block;
   margin: 0 auto;
   margin: 0 auto;
   width: 80%;
-  font-size: 1.7em;
+  font-size: 1.7rem;
   font-family: 'Source Code Pro';
   font-weight: 900;
   color: teal;
 }
+
+input#greeting_body {
+  height: 1.6rem;
+  border-radius: 2rem;
+  border-color: #cb7;
+  padding-left: .5rem;
+  border-style: solid;
+  font-size: .55rem;
+}
+
+.individual-greeting {
+    margin-top: 1.3rem;
+}
+
+input#greeting_body::placeholder { 
+  color: #ddd 
+}
+
+/* greet button */
+.greet-button {
+  margin-right: .4rem;
+}
+
+.greet-button input[type="submit"]   {
+  margin-top: .3rem;
+  background-color: #e6dfbf;
+  font-weight: 600;
+  border: .5px solid rgba(191, 176, 14, 0.7411764);
+  /*border-width: 2px;*/
+  border-radius: 2rem;
+  height: 2rem;
+  width: 4rem;
+  float: right;
+  font-size: .55rem;
+  box-shadow: 1px 3px 2px 0 rgba(0, 50, 50, .5);
+}
+
+input[type="submit"]:focus  {
+  outline: 0;
+}
+
+.greet-button:hover {background-color: #bfb99e}
+
+.greet-button:active {
+  background-color: #3e8e41;
+  box-shadow: 1px 3px 2px 0 rgba(0, 50, 50, .5);
+  transform: translateY(1px);
+}
+
+button:focus {outline:0;}
 
 .form_for_signup_and_sign_in {
   display: block;
   margin: 0 auto;
   margin: 0 auto;
   width: 80%;
-  font-size: 1.7em;
+  font-size: 1.7rem;
   font-family: 'Source Code Pro';
   font-weight: 900;
   color: teal;
 }
 
 #greeting_body {
-  height: 20px;
+  height: 1.5rem;
 }
 
 /*text styles*/
+
+html {
+ font-size: 25px;
+}
 
 .red_alert {
   color: red;
 }
 
 .greeting_text {
-	font-size: 15pt;
-	font-family: 'Source Code Pro';
-	font-weight: 400;
-	padding: 5pt;	
+  font-size: 1rem;
+  font-family: 'Source Code Pro';
+  font-weight: 400;
+  padding: .3rem;
 }
 
 .uname{
-	font-size: 20pt;
-	color: teal;
-	font-family: 'Source Code Pro';
-	font-weight: 900;
+  font-size: 1.25rem;
+  color: teal;
+  font-family: 'Source Code Pro';
+  font-weight: 900;
+}
+
+.greeting_sender {
+  font-family: 'Source Code Pro';
+  color: #008080;
 }
 
 h1 {
-	font-size: 3em;
+  font-size: 3rem;
   text-align: center;
   font-family: "Fontdiner Swanky";
   color: #cb7;
 }
 
 h2 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   text-align: center;
   font-family: "Fontdiner Swanky";
   color: #666;
 }
 
 h3 {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-family: "Fontdiner Swanky";
   color: #666;
 }
-
 
 .timestamp {
   font-style: italic;
@@ -106,7 +174,7 @@ h3 {
 }
 
 #proof_o_sending {
-  font-size: .5em;
+  font-size: .5rem;
   font-style: italic;
   color: #666;
 }
@@ -150,27 +218,31 @@ h3 {
 
   max-width: 80%;
   border-radius: 5px;
-	margin-left: 10pt;
-	margin-right: 10pt;
-	padding: 5pt;
-	color: #FFFFFF;
-	background-color: gray;
-	text-decoration: none;
-	font-family: arial;
-	font-size: 20 pt;
+  margin-left: .66rem;
+  margin-right: .66rem;
+  padding: .3rem;
+  color: #FFFFFF;
+  background-color: gray;
+  text-decoration: none;
+  font-family: arial;
+  font-size: 1.25rem;
 }
 
 .sign_out_link a{
   float: right;
   border-radius: 5px;
   max-width: 80%;
-  margin-left: 10pt;
-  margin-right: 10pt;
-  padding: 5pt;
+  margin-left: .66rem;
+  margin-right: .66rem;
+  padding: .3rem;
   color: #FFFFFF;
   background-color: gray;
   text-decoration: none;
   font-family: arial;
-  font-size: 20 pt;
+  font-size:  1.25rem;
+}
 
+.note {
+  font-size: .9rem;
+  font-style: italic;
 }

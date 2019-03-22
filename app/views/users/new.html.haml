@@ -1,0 +1,24 @@
+%h2 Instant Message Your Friends with Greet-zings!
+.note Please use fake email and password, this is a demo site without a security certificate
+.spacer
+.form_for_signup_and_sign_in
+  = form_for @user do |form|
+    %div
+      = form.label :email
+      = form.email_field :email
+    %div
+      = form.label :user_name
+      = form.text_field :user_name
+    %div
+      = form.label :password
+      = form.password_field :password
+    %div
+      = form.submit "Sign up"
+.center
+  .create_session_links
+    - if signed_in?
+      = button_to "Sign out", :session, method: :delete
+    - else
+      %h3 Already One of Us?
+      %span.roomy= link_to "Show Sign In Form", [:new, :session]
+

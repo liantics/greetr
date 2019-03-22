@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Greetr
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    %link{:href => "https://fonts.googleapis.com/css?family=Fontdiner+Swanky:400", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Source+Code+Pro:400,900", :rel => "stylesheet", :type => "text/css"}/
+    = csrf_meta_tags
+  %body
+    - if signed_in?
+      .sign-out-wrapper
+        %span.sign_out_link= link_to "Sign out", :session, method: :delete
+    %h1 Greet-Zings!
+    .spaceship
+      .bubble
+      .ship_base
+    .spacer
+    = yield
+    %script{:src => "//js.pusher.com/2.2/pusher.min.js"}
+

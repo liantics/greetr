@@ -1,0 +1,68 @@
+:root {
+  --radius: 2em;
+  --baseFg: #666;
+  --baseBg: #FFF;
+  --accentFg: #cb7;
+  --accentBg: #008080;
+}
+
+.theme-pink {
+  --radius: 2em;
+  --baseFg: #c70062;
+  --baseBg: #ffe3f1;
+  --accentFg: #c70062;
+  --accentBg: #ffaad4;
+}
+
+.theme-construction {
+  --radius: 0;
+  --baseFg: white;
+  --baseBg: black;
+  --accentFg: black;
+  --accentBg: orange;
+}
+
+select {
+  font: 400 .62rem sans-serif;
+  -webkit-appearance: none;
+  appearance: none;
+  color: var(--baseFg);
+  border: 2px solid #cb7;
+  height: 2rem;
+  width: 6rem;
+  line-height: 1;
+  outline: 0;
+  padding: 0.65em 2.5em 0.55em 0.75em;
+  border-radius: var(--radius);
+  background-color: var(--baseBg);
+/*
+  background-image: linear-gradient(var(--baseFg), var(--baseFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentBg) 50%),
+    linear-gradient(-225deg, transparent 50%, var(--accentBg) 50%),
+    linear-gradient(var(--accentBg) 42%, var(--accentFg) 42%);*/
+  background-image: 
+    linear-gradient(var(--baseFg), var(--baseFg)), 
+    linear-gradient(-135deg, transparent 39%, var(--accentBg) 36%), 
+    linear-gradient(-225deg, transparent 36%, var(--accentBg) 27%), 
+    linear-gradient(var(--accentBg) 52%, var(--accentFg) 5%);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+  background-position: right 20px center, right bottom, right bottom, right bottom;   
+}
+
+select:hover {
+  background-image: linear-gradient(var(--accentFg), var(--accentFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+}
+
+select:active {
+  background-image: linear-gradient(var(--accentFg), var(--accentFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+  color: var(--accentBg);
+  border-color: var(--accentFg);
+  background-color: var(--accentFg);
+}

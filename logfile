@@ -1,0 +1,13 @@
+2019-03-21 13:55:13.842 EDT [39498] LOG:  listening on IPv6 address "::1", port 5432
+2019-03-21 13:55:13.842 EDT [39498] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-03-21 13:55:13.843 EDT [39498] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-03-21 13:55:13.852 EDT [39499] LOG:  database system was shut down at 2019-03-21 13:54:34 EDT
+2019-03-21 13:55:13.855 EDT [39498] LOG:  database system is ready to accept connections
+2019-03-21 13:56:14.793 EDT [39591] FATAL:  database "liantics" does not exist
+2019-03-21 13:56:54.367 EDT [39601] FATAL:  database "liantics" does not exist
+2019-03-21 13:58:26.376 EDT [39619] FATAL:  database "liantics" does not exist
+2019-03-21 14:01:06.519 EDT [39645] FATAL:  database "liantics" does not exist
+2019-03-21 14:01:35.237 EDT [39649] FATAL:  database "liantics" does not exist
+2019-03-21 14:01:57.546 EDT [39655] FATAL:  database "liantics" does not exist
+2019-03-21 14:02:19.789 EDT [39660] FATAL:  role "greetr" does not exist
+2019-03-21 14:05:20.373 EDT [39689] FATAL:  role "greet" does not exist

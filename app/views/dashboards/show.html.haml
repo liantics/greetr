@@ -1,0 +1,21 @@
+.center
+  %h2
+    Hey, #{current_user.user_name}! Send some greetings...
+  #errors.red_alert
+  .spacer
+  .form-wrapper
+    .form_for_greetings
+      = form_for @greeting do |f|
+        = f.label :body, "Send"
+        = f.text_field :body, placeholder: "Greetings, earthling!"
+        = f.label :receiver, "to"
+        = f.collection_select :receiver_id, @users, :id, :user_name, {class: "theme-teal" }
+        .greet-button= f.submit "Greet!"
+        %span#proof_o_sending
+  .spacer
+  #the_greetings.block_o_greetings
+    = render @greetings
+  :javascript
+    window.pusher_key = "#{ENV.fetch("PUSHER_PUBLIC_KEY")}";
+    window.pusher_channel = "#{current_user.id}"
+
