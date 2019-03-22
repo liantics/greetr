@@ -64,7 +64,7 @@ input#greeting_body {
 }
 
 .individual-greeting {
-    margin-top: 1.3rem;
+  margin-top: 1.3rem;
 }
 
 input#greeting_body::placeholder { 

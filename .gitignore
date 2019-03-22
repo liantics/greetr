@@ -7,9 +7,6 @@
 # Ignore application.yml
 /config/application.yml
 
-# Ignore Gemfile.lock
-Gemfile.lock
-
 # Ignore bundler config.
 /.bundle
 
