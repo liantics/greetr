@@ -22,3 +22,25 @@
       %h3 Already One of Us?
       %span.roomy= link_to "Show Sign In Form", [:new, :session]
 
+
+%h2 Instant Message Your Friends with Greet-zings!
+.note Please use fake email and password, this is a demo site without a security certificate
+.spacer
+.form_for_signup_and_sign_in
+  = form_for :session, url: session_path do |form|
+    %div
+      = form.label :email
+      .greeting_text= form.email_field :email
+    %div
+      = form.label :password
+      .greeting_text= form.password_field :password
+    %div
+      %span.create_session_links= form.submit "Sign in"
+.center
+  .create_session_links
+    - if signed_in?
+      = button_to "Sign out", :session, method: :delete
+    - else
+      %h3 Not Signed Up, Yet?
+      = link_to "Show Sign Up Form", [:new, :user]
+

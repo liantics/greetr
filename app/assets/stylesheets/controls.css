@@ -35,11 +35,6 @@ select {
   padding: 0.65em 2.5em 0.55em 0.75em;
   border-radius: var(--radius);
   background-color: var(--baseBg);
-/*
-  background-image: linear-gradient(var(--baseFg), var(--baseFg)),
-    linear-gradient(-135deg, transparent 50%, var(--accentBg) 50%),
-    linear-gradient(-225deg, transparent 50%, var(--accentBg) 50%),
-    linear-gradient(var(--accentBg) 42%, var(--accentFg) 42%);*/
   background-image: 
     linear-gradient(var(--baseFg), var(--baseFg)), 
     linear-gradient(-135deg, transparent 39%, var(--accentBg) 36%), 
@@ -58,10 +53,11 @@ select:hover {
 }
 
 select:active {
-  background-image: linear-gradient(var(--accentFg), var(--accentFg)),
-    linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
-    linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
-    linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+  background-image: 
+    linear-gradient(var(--accentFg), var(--accentFg)), 
+    linear-gradient(-135deg, transparent 39%, var(--accentFg) 36%), 
+    linear-gradient(-225deg, transparent 36%, var(--accentFg) 27%), 
+    linear-gradient(var(--accentFg) 52%, var(--accentFg) 5%);
   color: var(--accentBg);
   border-color: var(--accentFg);
   background-color: var(--accentFg);

@@ -11,3 +11,22 @@
 2019-03-21 14:01:57.546 EDT [39655] FATAL:  database "liantics" does not exist
 2019-03-21 14:02:19.789 EDT [39660] FATAL:  role "greetr" does not exist
 2019-03-21 14:05:20.373 EDT [39689] FATAL:  role "greet" does not exist
+2019-03-21 21:56:20.993 EDT [96642] FATAL:  role "root" does not exist
+2019-03-21 22:04:08.804 EDT [96852] ERROR:  unrecognized configuration parameter "tables"
+2019-03-21 22:04:08.804 EDT [96852] STATEMENT:  show tables;
+2019-03-21 22:07:14.221 EDT [96891] ERROR:  syntax error at or near "use" at character 1
+2019-03-21 22:07:14.221 EDT [96891] STATEMENT:  use greetr_development;
+2019-03-21 22:11:34.663 EDT [96908] ERROR:  column "Wally" does not exist at character 28
+2019-03-21 22:11:34.663 EDT [96908] STATEMENT:  update users set user_name="Wally" where id = 1;
+2019-03-21 22:14:06.012 EDT [96908] ERROR:  syntax error at or near "WHERE" at character 39
+2019-03-21 22:14:06.012 EDT [96908] STATEMENT:  UPDATE users
+	SET user_name = 'Wally',
+	WHERE
+	 ID = 1
+	;
+2019-03-21 22:14:16.747 EDT [96908] ERROR:  syntax error at or near "WHERE" at character 39
+2019-03-21 22:14:16.747 EDT [96908] STATEMENT:  UPDATE users
+	SET user_name = 'Wally',
+	WHERE
+	 ID = 1
+	;

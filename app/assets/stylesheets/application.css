@@ -26,6 +26,14 @@
   width: 80%;
 }
 
+.note {
+  font-size: .5rem;
+  font-style: italic;
+  margin: 4rem;
+  color: red;
+  text-align: center;
+}
+
 .sign-out-wrapper {
   height: 2rem;
 }
@@ -54,7 +62,7 @@
   color: teal;
 }
 
-input#greeting_body {
+input {
   height: 1.6rem;
   border-radius: 2rem;
   border-color: #cb7;
@@ -67,25 +75,21 @@ input#greeting_body {
   margin-top: 1.3rem;
 }
 
-input#greeting_body::placeholder { 
+input::placeholder { 
   color: #ddd 
 }
 
 /* greet button */
-.greet-button {
-  margin-right: .4rem;
-}
 
 .greet-button input[type="submit"]   {
   margin-top: .3rem;
   background-color: #e6dfbf;
+  color: #666;
   font-weight: 600;
   border: .5px solid rgba(191, 176, 14, 0.7411764);
-  /*border-width: 2px;*/
   border-radius: 2rem;
   height: 2rem;
   width: 4rem;
-  float: right;
   font-size: .55rem;
   box-shadow: 1px 3px 2px 0 rgba(0, 50, 50, .5);
 }
@@ -213,19 +217,23 @@ h3 {
 }
 
 /*links for login and signup */
-
-.create_session_links a{
-
+.create_session_links a, .form_for_signup_and_sign_in input[type="submit"] {
   max-width: 80%;
   border-radius: 5px;
   margin-left: .66rem;
   margin-right: .66rem;
-  padding: .3rem;
   color: #FFFFFF;
   background-color: gray;
   text-decoration: none;
   font-family: arial;
   font-size: 1.25rem;
+}
+.create_session_links a {
+  padding: .4rem;
+}
+
+.form_for_signup_and_sign_in input[type="submit"] {
+  padding: .1rem .5rem 1.6rem .5rem;
 }
 
 .sign_out_link a{

@@ -1,13 +1,14 @@
 %h2 Instant Message Your Friends with Greet-zings!
+.note Please use fake email and password, this is a demo site without a security certificate
 .spacer
 .form_for_signup_and_sign_in
   = form_for :session, url: session_path do |form|
     %div
       = form.label :email
-      = form.email_field :email
+      .greeting_text= form.email_field :email
     %div
       = form.label :password
-      = form.password_field :password
+      .greeting_text= form.password_field :password
     %div
       = form.submit "Sign in"
 .center
