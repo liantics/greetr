@@ -15,6 +15,10 @@
  */
 
 /*alignment styles*/
+.content {
+  width: 90%;
+  margin: 0 3rem;
+}
 .spacer {
   height: 1.5rem;
 }
@@ -27,9 +31,9 @@
 }
 
 .note {
-  font-size: .5rem;
+  font-size: .7rem;
   font-style: italic;
-  margin: 4rem;
+  margin: 2rem;
   color: red;
   text-align: center;
 }
@@ -77,6 +81,10 @@ input {
 
 input::placeholder { 
   color: #ddd 
+}
+
+input#user_user_name, input#user_email, input#session_email, input#session_password, input#user_password {
+    width: 15rem;
 }
 
 /* greet button */
@@ -172,6 +180,13 @@ h3 {
   color: #666;
 }
 
+.sign-up-toggle {
+  margin: 1.5rem 0 1rem 1rem;
+}
+.create_session_links h3 {
+  font-size: 1rem;
+}
+
 .timestamp {
   font-style: italic;
   color: #ccc;
@@ -250,7 +265,3 @@ h3 {
   font-size:  1.25rem;
 }
 
-.note {
-  font-size: .9rem;
-  font-style: italic;
-}

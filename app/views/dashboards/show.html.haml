@@ -10,7 +10,8 @@
         = f.text_field :body, placeholder: "Greetings, earthling!"
         = f.label :receiver, "to"
         = f.collection_select :receiver_id, @users, :id, :user_name, {class: "theme-teal" }
-        .greet-button= f.submit "Greet!"
+        .center
+          .greet-button= f.submit "Greet!"
         %span#proof_o_sending
   .spacer
   #the_greetings.block_o_greetings
